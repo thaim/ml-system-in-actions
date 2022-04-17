@@ -16,26 +16,20 @@ Anaconda/miniconda の実行環境は pyenv 等仮想環境で用意すること
 pyenv で環境構築する方法は以下のとおりです。
 
 ```sh
-# 2021/02時点最新のanaconda環境を選択
-$ pyenv install anaconda3-5.3.1
-Downloading Anaconda3-5.3.1-MacOSX-x86_64.sh.sh...
--> https://repo.continuum.io/archive/Anaconda3-5.3.1-MacOSX-x86_64.sh
-Installing Anaconda3-5.3.1-MacOSX-x86_64.sh...
-Installed Anaconda3-5.3.1-MacOSX-x86_64.sh to ~/.pyenv/versions/anaconda3-5.3.1
+# Python3.8系最新のanaconda環境を選択
+$ pyenv install anaconda3-2021.05
+Downloading Anaconda3-2021.05-Linux-x86_64.sh...
+-> https://repo.continuum.io/archive/Anaconda3-2021.05-Linux-x86_64.sh
+Installing Anaconda3-2021.05-Linux-x86_64...
+Installed Anaconda3-2021.05-Linux-x86_64 to ~/.pyenv/versions/anaconda3-2021.05
 
-# pyenvで仮想環境にanaconda3-2020.02を選択
-$ pyenv local anaconda3-5.3.1
+# pyenvで仮想環境にanaconda3-2021.05を選択
+$ pyenv local anaconda3-2021.05
 
-# 仮想環境がanaconda3-2020.02になっていることを確認
+# 仮想環境がanaconda3-2021.05になっていることを確認
 $ pyenv versions
   system
-* anaconda3-5.3.1
-
-# 依存ライブラリをインストール
-$ pip install -r requirements.txt
-
-# mlflowをインストール
-$ pip install mlflow
+* anaconda3-2021.05
 ```
 
 本プログラムは `/tmp/ml-system-in-actions/chapter2_training/cifar10/` ディレクトリで実行することを想定して書かれています。
