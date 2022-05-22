@@ -46,3 +46,14 @@ deploy:
 .PHONY: delete
 delete:
 	kubectl delete ns model-load
+
+.PHONY: port_forward
+port_forward:
+	kubectl -n model-load port-forward deployment.apps/model-load 8000:8000
+
+.PHONY: predict
+predict:
+	curl -X POST \
+		 -H "Content-Type: application/json" \
+		 -d '{"data": [[1.0, 2.0, 3.0, 4.0]]}' \
+		 localhost:8000/predict
