@@ -42,5 +42,5 @@ port_forward:
 predict:
 	curl -X POST \
 		 -H "Content-Type: application/json" \
-		 -d '{"data": [[1.0, 2.0, 3.0, 4.0]]}' \
+		 -d '{"data": [[5.1, 3.5, 1.4, 0.2]]}' \
 		 localhost:8000/predict
